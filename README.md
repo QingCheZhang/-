@@ -3,7 +3,7 @@
 &#8194;&#8194;训练精度如下<br></p>
 <div align="left"><img src="figure/figure1.png" width="48%"></div>
 模型使用方法：编辑modeluse.py文件<br></p>
-```
+```python
 from keras.models import load_model
 from pkg_resources import resource_filename
 from utils2 import one_hot_encode
@@ -29,7 +29,7 @@ print('donor_scores:', result)
 print('donor_sites:', indices)
 ```
 输入自己的序列然后运行
-```
+```python
 python modeluse.py
 ```
 即可得到的预测位点及其得分
