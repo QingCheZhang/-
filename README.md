@@ -36,4 +36,5 @@ donor_prob = y[0, :, 2]
 ```python
 python modeluse.py
 ```
-即可得到的预测位点及其得分
+即可得到的预测位点及其得分如图
+<div align="left"><img src="figure/figure1.png" width="48%"></div>
