@@ -27,7 +27,7 @@ print('acceptor_scores:', result1)
 print('acceptor_sites:', indices1)
 print('donor_scores:', result)
 print('donor_sites:', indices)
-```
+
 输入自己的序列然后运行
 ```python
 python modeluse.py
