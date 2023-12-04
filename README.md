@@ -3,7 +3,6 @@
 &#8194;&#8194;训练精度如下<br></p>
 <div align="left"><img src="figure/figure1.png" width="48%"></div>
 模型使用方法：编辑modeluse.py文件<br></p>
-输入自己的序列然后运行
 
 ```python
 from keras.models import load_model
@@ -31,6 +30,8 @@ print('donor_scores:', result)
 print('donor_sites:', indices)
 donor_prob = y[0, :, 2]
 ```
+
+输入自己的序列然后运行
 
 ```python
 python modeluse.py
