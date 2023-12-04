@@ -6,6 +6,33 @@
 输入自己的序列然后运行
 
 ```python
+from keras.models import load_model
+from pkg_resources import resource_filename
+from utils2 import one_hot_encode
+import numpy as np
+
+input_sequence = 'CGATCTGACGTGGGTGTCATCGCATTATCGATATTGCAT'
+#在这里输入你自己的序列
+context = 2000
+x = one_hot_encode('N'*(context//2) + input_sequence + 'N'*(context//2))[None, :]
+model_1 = load_model('./Models/SpliceAI2000_g1.keras')
+y1 = model_1.predict(x)
+acceptor_prob = y1[0, :, 1]
+donor_prob = y1[0, :, 2]
+
+import numpy as np
+result = donor_prob[donor_prob > 0.3]
+indices = np.where(donor_prob > 0.3)
+result1 = acceptor_prob[acceptor_prob > 0.3]
+indices1 = np.where(acceptor_prob > 0.3)
+print('acceptor_scores:', result1)
+print('acceptor_sites:', indices1)
+print('donor_scores:', result)
+print('donor_sites:', indices)
+donor_prob = y[0, :, 2]
+```
+
+```python
 python modeluse.py
 ```
 即可得到的预测位点及其得分
