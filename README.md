@@ -2,7 +2,7 @@
 &#8194;&#8194;前段时间分析三代测序数据时得到了一些新的剪切位点，由于Nanopore测序错误率较高，于是我就想结合预测的剪切位点看看测序得到的结果是否可靠。找了一圈没找到能用于拟南芥的剪切位点预测软件，于是仿照  [Jaganathan *et al*, Cell 2019 in press](https://doi.org/10.1016/j.cell.2018.12.015)训练了一个用于拟南芥剪切位点预测的深度残差神经网络。<br></p>
 &#8194;&#8194;训练精度如下<br></p>
 <div align="left"><img src="figure/figure1.png" width="48%"></div>
-模型使用方法：编辑modeluse.py文件<br></p>
+模型使用方法：编辑modeluse.py文件
 ```python
 from keras.models import load_model
 from pkg_resources import resource_filename
